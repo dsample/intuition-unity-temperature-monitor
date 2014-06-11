@@ -57,10 +57,10 @@ end
 
 class Notifier
   def self.notify(summary, body)
-    Libnotify.show summary: summary, body: body
+    Libnotify.show :summary => summary, :body => body
   end
   def self.notify(summary, body, icon)
-    Libnotify.show summary: summary, body: body, icon_path: icon.to_sym
+    Libnotify.show :summary => summary, :body => body, :icon_path => icon.to_sym
   end
 end
 
